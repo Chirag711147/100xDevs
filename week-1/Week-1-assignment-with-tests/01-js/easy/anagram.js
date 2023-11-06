@@ -7,8 +7,23 @@
   - `npm run test-anagram`
 */
 
-function isAnagram(str1, str2) {
+function sort(str)
+{
+  var removeSpaces=str.replace(/\s+/g,"").toLowerCase();
+  var sorted=removeSpaces.split("").sort().join("");
+  return sorted;
 
 }
+
+//convert to array sort it and then transform it back to a string and compare
+function isAnagram(s1,s2)
+{
+  console.log(sort(s1));
+  console.log(sort(s2));
+
+  return sort(s1)===sort(s2);
+  
+}
+console.log(isAnagram('Debit Card', 'Bad Credit'));
 
 module.exports = isAnagram;
